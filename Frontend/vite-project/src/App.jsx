@@ -10,7 +10,6 @@ function App() {
     const { value, checked } = e.target;
     setSelectedGenres(checked ? [...selectedGenres, value] : selectedGenres.filter((g) => g !== value));
   };
-
   const getRecommendations = async () => {
     try {
       const response = await axios.post("http://localhost:5000/recommendations", { userPreferences: selectedGenres });
