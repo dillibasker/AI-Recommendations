@@ -15,10 +15,13 @@ const Search = mongoose.model("Search", searchSchema);
 
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/recommendationDB", {
+
+mongoose.connect("mongodb+srv://dillibasker1:dilli1488@cluster0.b0c7pub.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+
+  
 
   
 const products = [
