@@ -11,8 +11,16 @@ const searchSchema= new mongoose.Schema({
     term: String,
   count: { type: Number, default: 1 },
 })
-/const Search = mongoose.model("Search", searchSchema);
+const Search = mongoose.model("Search", searchSchema);
 
+
+// Connect to MongoDB
+mongoose.connect("mongodb://localhost:27017/recommendationDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+
+  
 const products = [
   "Laptop", "Phone", "Tablet", "Headphones", "Camera", "Watch", "TV", "Shoes", "Bag", "Smart Speaker"
 ];
